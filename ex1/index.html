@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="content-type">
+    <link rel="stylesheet" href="css/style.css">
+    <title>exercícios leandro</title>
+</head>
+<body>
+    <div class="container">
+    <h2>Exercícios de JavaScript</h2>
+    <input type="number" id="numeroinput" placeholder="Digite números para somar "; >
+    <button id="button" onclick="somar()">Somar</button>
+    <p>Soma total: <span id="resultado">0</span></p>
+    </div>
+    <script>
+        var alunos = new Array("tavares", "leandro", "joão", "maria", "pedro");
+        const matérias = ["tecnologia para front end", "linguagem de programação 1 "];
+        let notas = [10, 9, 8, 7, 6];
+        var somadasNotas = 0;
+        function somaNotas() {
+            for (var i in notas) {
+               somadasNotas += notas[i];
+               console.log("A soma das notas é: " + somadasNotas);
+            }
+        }  
+        somaNotas();
+        var resposta = confirm("testando o carregamento do js. Clique em ok ou cancelar");
+        if (resposta) {
+            alert("Você clicou em ok");
+        } else {
+            alert("Você clicou em cancelar");
+        }
+    </script>
+    <script src="js/index.js"></script>
+</body>
+</html>
