@@ -2,8 +2,9 @@
 const form = document.getElementById("form-crud");        
 const inputId = document.getElementById("input-id");      
 const inputNome = document.getElementById("input-nome");  
-const btnLimpar = document.getElementById("btn-limpar");  
-const lista = document.getElementById("lista-registros"); 
+const btnLimpar = document.getElementById("btn-limpar");
+const btnInverter = document.getElementById("btn-inverter");
+const lista = document.getElementById("lista-registros");
 const mensagemVazia = document.getElementById("mensagem-vazia"); 
 
 
