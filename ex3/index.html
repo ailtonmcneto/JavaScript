@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Simples</title>
+    <!-- Folha de estilos -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Container principal que centraliza todo o conteúdo -->
+    <main class="container">
+
+        <h1 class="titulo">CRUD Simples</h1>
+
+        <!-- ============================================= -->
+        <!-- FORMULÁRIO: campos de texto para entrada     -->
+        <!-- ============================================= -->
+        <section class="card">
+            <h2 class="subtitulo">Cadastro</h2>
+
+            <form id="form-crud" class="formulario">
+
+                <!-- Campo oculto que guarda o id do item em edição (usado no JS) -->
+                <input type="hidden" id="input-id">
+
+                <!-- Campo: Nome -->
+                <div class="campo">
+                    <label for="input-nome">Nome</label>
+                    <input type="text" id="input-nome" placeholder="Digite o nome">
+                </div>
+
+                <!-- Campo: E-mail -->
+                <div class="campo">
+                    <label for="input-email">E-mail</label>
+                    <input type="email" id="input-email" placeholder="Digite o e-mail">
+                </div>
+
+                <!-- Botões de ação do formulário -->
+                <div class="grupo-botoes">
+                    <!-- Salvar (Create / Update) -->
+                    <button type="submit" id="btn-salvar" class="btn btn-primario">Salvar</button>
+                    <!-- Limpar os campos (Cancela a edição) -->
+                    <button type="button" id="btn-limpar" class="btn btn-secundario">Limpar</button>
+                </div>
+
+            </form>
+        </section>
+
+        <!-- ============================================= -->
+        <!-- ÁREA DE EXIBIÇÃO: lista dos registros (Read)  -->
+        <!-- ============================================= -->
+        <section class="card">
+            <h2 class="subtitulo">Registros</h2>
+
+            <!-- Tabela onde os dados serão exibidos.
+                 O <tbody> é preenchido dinamicamente pelo JS. -->
+            <table class="tabela">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>E-mail</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <!-- As linhas (com botões Editar/Excluir) entram aqui via JS -->
+                <tbody id="lista-registros"></tbody>
+            </table>
+
+            <!-- Mensagem exibida quando não há registros (controlada pelo JS) -->
+            <p id="mensagem-vazia" class="mensagem-vazia">Nenhum registro cadastrado.</p>
+        </section>
+
+    </main>
+
+    <!-- Script principal (a lógica do CRUD será feita depois) -->
+    <script src="js/index.js"></script>
+</body>
+</html>
