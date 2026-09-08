@@ -1,70 +1,62 @@
 /* ==========================================================
    Estilo do CRUD Simples
-   Paleta em tons de bege
+   Paleta em tons de bege (cores escritas direto, sem variaveis)
    ========================================================== */
 
-/* Variáveis de cor para facilitar ajustes */
-:root {
-    --bege-claro: #f5f0e6;   /* fundo da página */
-    --bege-medio: #e8dcc4;   /* fundo dos cartões */
-    --bege-escuro: #d9c9a3;  /* bordas e detalhes */
-    --marrom: #6b5b3e;       /* textos e botões */
-    --marrom-claro: #a08c65; /* botão secundário */
-    --branco: #fffdf8;       /* campos de texto */
-    --vermelho: #b5651d;     /* botão de excluir */
-}
-
-/* Reset básico */
+/* Reset basico: tira margens/espacos padrao do navegador */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Corpo da pagina */
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: var(--bege-claro);
-    color: var(--marrom);
+    background-color: #f5f0e6; /* bege claro no fundo */
+    color: #6b5b3e;            /* marrom no texto */
     line-height: 1.5;
     padding: 20px;
 }
 
-/* Container central */
+/* Caixa central que segura todo o conteudo */
 .container {
     max-width: 700px;
-    margin: 0 auto;
+    margin: 0 auto; /* centraliza na horizontal */
 }
 
-/* Títulos */
+/* Titulo principal */
 .titulo {
     text-align: center;
     margin-bottom: 24px;
-    color: var(--marrom);
+    color: #6b5b3e;
 }
 
+/* Titulo de cada secao */
 .subtitulo {
     margin-bottom: 16px;
-    font-size: 1.2rem;
-    border-bottom: 2px solid var(--bege-escuro);
+    font-size: 20px;
+    border-bottom: 2px solid #d9c9a3;
     padding-bottom: 8px;
 }
 
-/* Cartões (formulário e lista) */
+/* Cartoes (formulario e lista) */
 .card {
-    background-color: var(--bege-medio);
-    border: 1px solid var(--bege-escuro);
+    background-color: #e8dcc4; /* bege medio */
+    border: 1px solid #d9c9a3;
     border-radius: 8px;
     padding: 20px;
     margin-bottom: 24px;
 }
 
-/* ---------- Formulário ---------- */
+/* ---------- Formulario ---------- */
 .formulario {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
+/* Cada campo (label + input) */
 .campo {
     display: flex;
     flex-direction: column;
@@ -73,63 +65,67 @@ body {
 
 .campo label {
     font-weight: bold;
-    font-size: 0.9rem;
+    font-size: 14px;
 }
 
 .campo input {
     padding: 10px;
-    border: 1px solid var(--bege-escuro);
+    border: 1px solid #d9c9a3;
     border-radius: 6px;
-    background-color: var(--branco);
-    font-size: 1rem;
-    color: var(--marrom);
+    background-color: #fffdf8; /* quase branco */
+    font-size: 16px;
+    color: #6b5b3e;
 }
 
+/* Destaque quando o campo esta selecionado */
 .campo input:focus {
     outline: none;
-    border-color: var(--marrom-claro);
+    border-color: #a08c65;
 }
 
-/* ---------- Botões ---------- */
+/* ---------- Botoes ---------- */
 .grupo-botoes {
     display: flex;
     gap: 12px;
 }
 
+/* Estilo comum a todos os botoes */
 .btn {
     padding: 10px 18px;
     border: none;
     border-radius: 6px;
-    font-size: 0.95rem;
+    font-size: 15px;
     cursor: pointer;
-    color: var(--branco);
-    transition: opacity 0.2s;
+    color: #fffdf8;
 }
 
 .btn:hover {
     opacity: 0.85;
 }
 
+/* Botao principal (Salvar) */
 .btn-primario {
-    background-color: var(--marrom);
+    background-color: #6b5b3e;
 }
 
+/* Botao secundario (Limpar) */
 .btn-secundario {
-    background-color: var(--marrom-claro);
+    background-color: #a08c65;
 }
 
+/* Botao de excluir */
 .btn-excluir {
-    background-color: var(--vermelho);
+    background-color: #b5651d;
 }
 
-/* Botões menores usados dentro da tabela */
+/* Botoes menores que aparecem dentro da tabela */
 .btn-acao {
     padding: 6px 12px;
-    font-size: 0.85rem;
+    font-size: 13px;
     margin-right: 6px;
 }
 
-/* ---------- Tabela / Área de exibição ---------- */
+/* ---------- Tabela / Area de exibicao ---------- */
 .tabela {
     width: 100%;
     border-collapse: collapse;
@@ -139,17 +135,17 @@ body {
 .tabela td {
     text-align: left;
     padding: 10px;
-    border-bottom: 1px solid var(--bege-escuro);
+    border-bottom: 1px solid #d9c9a3;
 }
 
 .tabela th {
-    background-color: var(--bege-escuro);
+    background-color: #d9c9a3;
 }
 
-/* Mensagem de lista vazia */
+/* Mensagem exibida quando nao ha registros */
 .mensagem-vazia {
     text-align: center;
     padding: 16px;
     font-style: italic;
-    color: var(--marrom-claro);
+    color: #a08c65;
 }
