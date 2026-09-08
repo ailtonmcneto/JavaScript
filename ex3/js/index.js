@@ -11,7 +11,6 @@
 const form = document.getElementById("form-crud");        // o formulario
 const inputId = document.getElementById("input-id");      // campo oculto (id do item)
 const inputNome = document.getElementById("input-nome");  // campo do nome
-const inputEmail = document.getElementById("input-email");// campo do email
 const btnLimpar = document.getElementById("btn-limpar");  // botao limpar
 const lista = document.getElementById("lista-registros"); // corpo da tabela (tbody)
 const mensagemVazia = document.getElementById("mensagem-vazia"); // aviso "sem registros"
@@ -19,7 +18,7 @@ const mensagemVazia = document.getElementById("mensagem-vazia"); // aviso "sem r
 // ----------------------------------------------------------
 // 2) Onde os dados ficam guardados
 //    "registros" e um array (uma lista) que vai guardar os itens.
-//    Cada item sera um objeto assim: { id: 1, nome: "Ana", email: "ana@x.com" }
+//    Cada item sera um objeto assim: { id: 1, nome: "Ana" }
 //    "proximoId" serve para dar um numero unico a cada novo registro.
 // ----------------------------------------------------------
 let registros = [];
@@ -50,11 +49,10 @@ function mostrarRegistros() {
         // Cria a linha <tr>
         const linha = document.createElement("tr");
 
-        // Preenche a linha com as colunas (nome, email e os botoes)
+        // Preenche a linha com as colunas (nome e os botoes)
         // Os botoes chamam as funcoes editar() e excluir() passando o id.
         linha.innerHTML =
             "<td>" + registro.nome + "</td>" +
-            "<td>" + registro.email + "</td>" +
             "<td>" +
                 "<button class='btn btn-secundario btn-acao' onclick='editar(" + registro.id + ")'>Editar</button>" +
                 "<button class='btn btn-excluir btn-acao' onclick='excluir(" + registro.id + ")'>Excluir</button>" +
@@ -77,11 +75,10 @@ form.addEventListener("submit", function (evento) {
 
     // Le o que foi digitado (trim() tira espacos das pontas)
     const nome = inputNome.value.trim();
-    const email = inputEmail.value.trim();
 
-    // Validacao simples: nao deixa salvar campos vazios
-    if (nome === "" || email === "") {
-        alert("Preencha o nome e o e-mail.");
+    // Validacao simples: nao deixa salvar o campo vazio
+    if (nome === "") {
+        alert("Preencha o nome.");
         return;
     }
 
@@ -89,8 +86,7 @@ form.addEventListener("submit", function (evento) {
         // ---- CREATE: criar um novo registro ----
         const novo = {
             id: proximoId,   // numero unico
-            nome: nome,
-            email: email
+            nome: nome
         };
         registros.push(novo); // adiciona no final da lista
         proximoId++;          // prepara o proximo id
@@ -102,7 +98,6 @@ form.addEventListener("submit", function (evento) {
         for (let i = 0; i < registros.length; i++) {
             if (registros[i].id === id) {
                 registros[i].nome = nome;
-                registros[i].email = email;
                 break; // achou, pode parar o laco
             }
         }
@@ -125,7 +120,6 @@ function editar(id) {
             // Copia os valores para os campos do formulario
             inputId.value = registros[i].id;     // guarda o id no campo oculto
             inputNome.value = registros[i].nome;
-            inputEmail.value = registros[i].email;
             break;
         }
     }
@@ -159,7 +153,6 @@ function excluir(id) {
 function limparFormulario() {
     inputId.value = "";
     inputNome.value = "";
-    inputEmail.value = "";
 }
 
 // Faz o botao "Limpar" chamar a funcao acima quando clicado
