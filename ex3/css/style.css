@@ -1,9 +1,4 @@
-/* ==========================================================
-   Estilo do CRUD Simples
-   Paleta em tons de bege (cores escritas direto, sem variaveis)
-   ========================================================== */
 
-/* Reset basico: tira margens/espacos padrao do navegador */
 * {
     margin: 0;
     padding: 0;
@@ -13,8 +8,8 @@
 /* Corpo da pagina */
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f5f0e6; /* bege claro no fundo */
-    color: #6b5b3e;            /* marrom no texto */
+    background-color: #f5f0e6; 
+    color: #6b5b3e;           
     line-height: 1.5;
     padding: 20px;
 }
@@ -22,7 +17,7 @@ body {
 /* Caixa central que segura todo o conteudo */
 .container {
     max-width: 700px;
-    margin: 0 auto; /* centraliza na horizontal */
+    margin: 0 auto; 
 }
 
 /* Titulo principal */
@@ -72,7 +67,7 @@ body {
     padding: 10px;
     border: 1px solid #d9c9a3;
     border-radius: 6px;
-    background-color: #fffdf8; /* quase branco */
+    background-color: #fffdf8; 
     font-size: 16px;
     color: #6b5b3e;
 }
