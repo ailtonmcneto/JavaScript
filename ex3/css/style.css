@@ -1,0 +1,155 @@
+/* ==========================================================
+   Estilo do CRUD Simples
+   Paleta em tons de bege
+   ========================================================== */
+
+/* Variáveis de cor para facilitar ajustes */
+:root {
+    --bege-claro: #f5f0e6;   /* fundo da página */
+    --bege-medio: #e8dcc4;   /* fundo dos cartões */
+    --bege-escuro: #d9c9a3;  /* bordas e detalhes */
+    --marrom: #6b5b3e;       /* textos e botões */
+    --marrom-claro: #a08c65; /* botão secundário */
+    --branco: #fffdf8;       /* campos de texto */
+    --vermelho: #b5651d;     /* botão de excluir */
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--bege-claro);
+    color: var(--marrom);
+    line-height: 1.5;
+    padding: 20px;
+}
+
+/* Container central */
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Títulos */
+.titulo {
+    text-align: center;
+    margin-bottom: 24px;
+    color: var(--marrom);
+}
+
+.subtitulo {
+    margin-bottom: 16px;
+    font-size: 1.2rem;
+    border-bottom: 2px solid var(--bege-escuro);
+    padding-bottom: 8px;
+}
+
+/* Cartões (formulário e lista) */
+.card {
+    background-color: var(--bege-medio);
+    border: 1px solid var(--bege-escuro);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 24px;
+}
+
+/* ---------- Formulário ---------- */
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.campo label {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.campo input {
+    padding: 10px;
+    border: 1px solid var(--bege-escuro);
+    border-radius: 6px;
+    background-color: var(--branco);
+    font-size: 1rem;
+    color: var(--marrom);
+}
+
+.campo input:focus {
+    outline: none;
+    border-color: var(--marrom-claro);
+}
+
+/* ---------- Botões ---------- */
+.grupo-botoes {
+    display: flex;
+    gap: 12px;
+}
+
+.btn {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    color: var(--branco);
+    transition: opacity 0.2s;
+}
+
+.btn:hover {
+    opacity: 0.85;
+}
+
+.btn-primario {
+    background-color: var(--marrom);
+}
+
+.btn-secundario {
+    background-color: var(--marrom-claro);
+}
+
+.btn-excluir {
+    background-color: var(--vermelho);
+}
+
+/* Botões menores usados dentro da tabela */
+.btn-acao {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    margin-right: 6px;
+}
+
+/* ---------- Tabela / Área de exibição ---------- */
+.tabela {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabela th,
+.tabela td {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid var(--bege-escuro);
+}
+
+.tabela th {
+    background-color: var(--bege-escuro);
+}
+
+/* Mensagem de lista vazia */
+.mensagem-vazia {
+    text-align: center;
+    padding: 16px;
+    font-style: italic;
+    color: var(--marrom-claro);
+}
