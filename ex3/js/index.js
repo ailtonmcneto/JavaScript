@@ -12,6 +12,7 @@ const form = document.getElementById("form-crud");        // o formulario
 const inputId = document.getElementById("input-id");      // campo oculto (id do item)
 const inputNome = document.getElementById("input-nome");  // campo do nome
 const btnLimpar = document.getElementById("btn-limpar");  // botao limpar
+const btnInverter = document.getElementById("btn-inverter"); // botao inverter ordem
 const lista = document.getElementById("lista-registros"); // corpo da tabela (tbody)
 const mensagemVazia = document.getElementById("mensagem-vazia"); // aviso "sem registros"
 
@@ -157,6 +158,19 @@ function limparFormulario() {
 
 // Faz o botao "Limpar" chamar a funcao acima quando clicado
 btnLimpar.addEventListener("click", limparFormulario);
+
+// ----------------------------------------------------------
+// 7.1) Inverter a ordem da lista
+//    reverse() inverte a ordem dos itens do proprio array
+//    (o ultimo vira o primeiro, o primeiro vira o ultimo).
+// ----------------------------------------------------------
+function inverterOrdem() {
+    registros.reverse();  // vira a lista de cabeca pra baixo
+    mostrarRegistros();   // redesenha a tabela na nova ordem
+}
+
+// Faz o botao "Inverter ordem" chamar a funcao acima quando clicado
+btnInverter.addEventListener("click", inverterOrdem);
 
 // ----------------------------------------------------------
 // 8) Inicio
