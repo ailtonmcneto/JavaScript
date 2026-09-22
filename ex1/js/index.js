@@ -1,18 +1,10 @@
-const input = document.getElementById('numeroinput');
-const botao = document.getElementById('button');
-const resultado = document.getElementById('resultado');
+ let carros = ['bmw','ferrari','mercedes']
+ //1
+ console.log('1. '+ carros[1])
 
-let somatotal = 0
+ carros[1] = 'audi'
+ console.log(carros)
 
-botao.addEventListener('click', function() {
-    const numero = parseInt(input.value);
-    if (isNaN(numero)) {
-        resultado.textContent = 'Por favor, insira um número válido.';
-        return;
-    }
-
-    somatotal += numero;
-    resultado.textContent = `A soma total é: ${somatotal}`;
-    input.value = '';
-    input.focus();
-})
+ carros.push('Volvo')
+ console.log(carros)
+ console.log(carros.length)
