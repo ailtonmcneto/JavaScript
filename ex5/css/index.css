@@ -130,9 +130,10 @@ tbody tr:hover {
     background-color: #d2dff0;
 }
 
-/* mensagem "Contato salvo" que o JS joga no body */
-body > p {
-    margin-top: 15px;
+/* mensagem "Contato salvo" - some sozinha depois de 5s */
+#mensagem {
+    min-height: 28px;
+    margin-top: 10px;
     font-weight: 600;
     color: #2f9d6b;
 }
