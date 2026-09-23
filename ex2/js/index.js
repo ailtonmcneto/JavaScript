@@ -1,0 +1,17 @@
+let frutas = ["Maçã", "Banana", "Laranja", "Uva", "Morango"];
+let legumes = ["Cenoura", "Batata", "Tomate", "Alface", "Pepino"];
+const comidas = frutas.concat(legumes);
+console.log(comidas);
+console.log(comidas.join(" - "));
+comidas.push("Abacaxi");
+console.log(comidas);
+comidas.reverse();
+console.log(comidas);
+comidas.pop();
+console.log(comidas);
+comidas.unshift("Melancia");
+console.log(comidas);
+comidas.shift();
+console.log(comidas);
+let novacomidas = comidas.slice(1, 3);
+console.log(novacomidas);
