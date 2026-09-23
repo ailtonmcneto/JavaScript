@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Simples</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <main class="container">
+        <h1 class="titulo">CRUD Simples</h1>
+
+        <section class="card">
+            <h2 class="subtitulo">Cadastro</h2>
+            <form id="form-crud" class="formulario">
+                <input type="hidden" id="input-id">
+            
+                <div class="campo">
+                    <label for="input-nome">Nome</label>
+                    <input type="text" id="input-nome" placeholder="Digite o nome">
+                </div>
+
+                <div class="grupo-botoes">
+                    <button type="submit" id="btn-salvar" class="btn btn-primario">Salvar</button>
+                    <button type="button" id="btn-limpar" class="btn btn-secundario">Limpar</button>
+                </div>
+
+            </form>
+        </section>
+
+        <section class="card">
+            <h2 class="subtitulo">Registros</h2>
+
+            <button type="button" id="btn-inverter" class="btn btn-secundario">Inverter ordem</button>
+
+            <table class="tabela">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+
+            <tbody id="lista-registros"></tbody>
+        </table>
+
+        <p id="mensagem-vazia" class="mensagem-vazia">Nenhum registro cadastrado.</p>
+        </section>
+    </main>
+
+    <script src="js/index.js"></script>
+</body>
+</html>
