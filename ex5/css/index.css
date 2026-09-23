@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    color: #2b2f38;
+    background-color: #eef1f6;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 640px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 40px 35px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+    color: #1f3a68;
+}
+
+label {
+    display: inline-block;
+    font-weight: 600;
+    padding: 10px 8px;
+    min-width: 90px;
+    text-align: right;
+}
+
+input {
+    font-family: inherit;
+    font-size: 16px;
+    padding: 12px 14px;
+    margin: 8px 0;
+    width: 240px;
+    border: 1px solid #c3cad6;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus {
+    border-color: #2f6fd0;
+    box-shadow: 0 0 0 3px rgba(47, 111, 208, 0.18);
+}
+
+/* tira as setinhas do input number */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+button {
+    font-family: inherit;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 16px 32px;
+    margin: 20px 8px;
+    color: #ffffff;
+    background-color: #2f6fd0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+    background-color: #1f4f9c;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+#btnexibir {
+    background-color: #2f9d6b;
+}
+
+#btnexibir:hover {
+    background-color: #21764f;
+}
+
+table {
+    width: 100%;
+    margin-top: 25px;
+    border: 2px solid #1f3a68;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #b9c2d0;
+    padding: 14px 16px;
+    text-align: center;
+}
+
+thead th {
+    background-color: #1f3a68;
+    color: #ffffff;
+    font-size: 17px;
+    letter-spacing: 0.5px;
+}
+
+/* intercala as cores das linhas */
+tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #e6ecf5;
+}
+
+tbody tr:hover {
+    background-color: #d2dff0;
+}
+
+/* mensagem "Contato salvo" que o JS joga no body */
+body > p {
+    margin-top: 15px;
+    font-weight: 600;
+    color: #2f9d6b;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 25px 18px;
+    }
+
+    label {
+        display: block;
+        text-align: center;
+        min-width: auto;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
