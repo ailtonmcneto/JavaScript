@@ -18,15 +18,23 @@ const contato = {
 }
 
 btnAdicionar.addEventListener('click', () => {
-    contato.setnome(nome.value);
-    contato.settelefone(telefone.value);
-
+    VNome = nome.value;
+    VTelefone = telefone.value;
+    if (contato.getnome() === '' || contato.gettelefone() === '') {
+        mensagem.textContent = 'Preencha todos os campos';
+        clearTimeout(timer);
+        return;
+    }
+    else {
     mensagem.textContent = 'Contato salvo';
     clearTimeout(timer);
+    contato.setnome(VNome);
+    contato.settelefone(VTelefone);
     timer = setTimeout(() => {
         mensagem.textContent = '';
-    }, 5000);
+    }, 5000);}
 });
+
 
 btnExibir.addEventListener('click', () => {
     const linha = document.createElement('tr');

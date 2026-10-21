@@ -1,0 +1,18 @@
+Questão 3 – Interpretação de Código
+Durante a revisão de um sistema, foi encontrado o seguinte código:
+const pessoa = {
+nome: "Ana",
+getNome: function() {
+return this.nome;
+}
+};
+console.log(pessoa.getNome());
+Responda:
+a) Qual será a saída exibida no console?
+b) Explique o papel do this no método
+c) O que ocorreria se o retorno fosse return nome;?
+
+a: Ana
+b: o this aponta para o nome criado no objeto, retornando o nome já instanciado no objeto
+c: iria dar referenceError, porque iria achar nome como uma variavel e não iria encontrar já que nome 
+é uma propriedade do objeto, que só pode ser acessada por ele mesmo

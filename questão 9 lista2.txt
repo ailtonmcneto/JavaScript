@@ -1,0 +1,16 @@
+Questão 9 – Análise e Correção de Código
+Durante o desenvolvimento, foi identificado o seguinte problema:
+const pessoa = {
+nome: "Carlos",
+setNome: function(nome) {
+nome = nome;
+}
+};
+Responda:
+a) Identifique o erro lógico
+b) Corrija o código
+c) Explique por que o uso de this é necessário nesse contexto
+ 
+a: o programa procura nome como uma variavel, mas ela nao existe, pois está apenas declarada como propriedade do objeto pessoa, podendo apenas ser acessada pro ela.
+b: adição do this
+c: ele é necessário para apontar que o nome em questão é a propriedade do objeto, e não uma variavel.

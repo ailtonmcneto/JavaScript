@@ -1,0 +1,2 @@
+com o metodo dentro da função construtora, a cada novo objeto, se criava uma copia do metodo.
+com o prototype, o metodo só se cria uma vez e todos os produtos usam o mesmo método, gastando menos memoria
